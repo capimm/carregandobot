@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Discord Bot Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fab fa-discord"></i>
+                <h1>Entrar com Discord</h1>
+                <p>Faça login para acessar o painel de controle do bot</p>
+            </div>
+
+            <div class="login-content">
+                <div id="login-step-1" class="login-step">
+                    <p>Para configurar seu bot, você precisa estar logado com sua conta Discord.</p>
+                    <button id="discord-login-btn" class="discord-login-btn">
+                        <i class="fab fa-discord"></i>
+                        Continuar com Discord
+                    </button>
+                </div>
+
+                <div id="login-step-2" class="login-step" style="display: none;">
+                    <h3>Selecione um Servidor</h3>
+                    <p>Escolha o servidor onde você quer configurar o bot:</p>
+                    <div id="server-list" class="server-list">
+                        <!-- Servers will be loaded here -->
+                    </div>
+                    <div id="no-bot-message" class="no-bot-message" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h4>Bot não encontrado neste servidor</h4>
+                        <p>Para configurar o bot neste servidor, primeiro você precisa convidá-lo.</p>
+                        <a href="invite.html" class="btn-primary" target="_blank">
+                            <i class="fas fa-plus"></i> Convidar Bot
+                        </a>
+                    </div>
+                </div>
+
+                <div id="login-step-3" class="login-step" style="display: none;">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Verificando permissões...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-footer">
+                <p>Problemas para fazer login? <a href="#help">Obter ajuda</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
